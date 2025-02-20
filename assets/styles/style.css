@@ -1,0 +1,633 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --yellowDefault: #fcc92f;
+    --navyDefault: #0c0123;
+    --blackDefault: #0b0117;
+    --cardColor: #10012C;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Lexend, serif;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right, var(--yellowDefault) 30%, var(--navyDefault) 30%, var(--navyDefault));
+}
+
+/* navbar */
+header .nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    /* position: fixed; */
+    top: 0;
+    height: 100px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 350;
+    padding: 5px;
+    text-decoration: none;
+    transition: .2s ease-out;
+    position: relative;
+}
+
+.navbar ul li a,
+.navbar ul li a:after,
+.navbar ul li a:before {
+  transition: all .5s;
+}
+
+.navbar ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    height: 2px;
+    background: var(--yellowDefault);
+}
+
+.navbar ul li a:hover:after {
+    width: 100%;
+}
+
+.navbar ul li a:active {
+    color: var(--yellowDefault);
+}
+
+/* navlogo */
+.navlogo a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+/* hero */
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.line {
+    width: 100%;
+    border: 2px solid var(--yellowDefault);
+    border-radius: 5px;
+}
+
+.hero-right .white-txt {
+    color: white;
+}
+
+.hero-right .sub-judul {
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+.hero-right .hero-name {
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.hero-right .hero-name span {
+    color: var(--yellowDefault);
+}
+
+.hero-right .sub-text {
+    font-weight: 200;
+    font-size: 1.1rem;
+}
+
+.button button {
+    padding: .7rem;
+    color: var(--navyDefault);
+    background-color: var(--yellowDefault);
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid var(--navyDefault);
+}
+
+.button button:hover {
+    background-color: var(--navyDefault);
+    border: 1px solid #fcc92f;
+    color: white;
+}
+
+.hero-left {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-left img {
+    width: 75%;
+    transform: translateX(-15%);
+}
+
+/* main */
+main {
+    padding: 0;
+    margin: 0;
+}
+
+/* about section */
+#about {
+    background-color: var(--blackDefault);
+    height: 100vh;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    gap: 6rem;
+}
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-judul {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin: 0 0 2rem 0;
+}
+
+.about-sub-judul {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.about-judul span {
+    color: var(--yellowDefault);
+}
+
+.about-paragraf {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.paragraf-kiri {
+    display: flex;
+    line-height: 1.5rem;
+}
+
+.paragraf-kanan {
+    display: flex;
+    line-height: 1.5rem;
+}
+
+.about-judul,
+.about-sub-judul,
+.paragraf-kiri,
+.paragraf-kanan {
+    color: white;
+    padding: 0;
+}
+
+.judul-education,
+.paragraf-education {
+    color: white;
+}
+
+.nav-education {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 5rem;
+}
+
+.nav-education h1 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    position: relative;
+    margin: 0;
+    padding-left: .5rem;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.nav-education h1:hover {
+    border-left: 1px solid var(--yellowDefault);
+}
+
+.nav-education h1:focus {
+    border-left: 5px dashed var(--yellowDefault);
+}
+
+.nav-education h1:active,
+.nav-education h1:focus {
+    color: var(--yellowDefault);
+}
+
+.education-item {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.nama-sekolah {
+    color: white;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 1.5rem;
+}
+
+
+.tahun-sekolah {
+    color: white;
+    margin: 0;
+    margin-top: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--yellowDefault);
+}
+
+.tahun-sekolah-lulus {
+    color: white;
+    margin: 0;
+    margin-top: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid skyblue;
+}
+/* end of about section */
+
+/* skill section */
+#services {
+    background-color: var(--navyDefault);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.services-container {
+    height: 100%;
+}
+
+.judul-services {
+    margin: 0;
+    color: var(--yellowDefault);
+    font-size: 3rem;
+    font-weight: 500;
+    padding-top: 3rem;
+    border-bottom: 3px dashed var(--cardColor);
+    border-top: 3px dashed var(--cardColor);
+}
+
+.container-card {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    gap: 3rem;
+}
+
+.card {
+    background-color: var(--cardColor);
+    width: 25rem;
+    height: 25rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 2rem;
+    border: transparent;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.card-judul {
+    color: white;
+    font-weight: 300;
+    margin: 0;
+    padding-top: 2rem;
+}
+
+.card-sub {
+    color: white;
+    margin: 0;
+    padding-top: 1rem;
+}
+
+.card-button {
+    width: 30%;
+    background-color: var(--yellowDefault);
+    padding: .7rem 0 .7rem 0;
+    border: transparent;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.card-svg {
+    fill: whitesmoke;
+}
+
+/* end of skill section */
+
+/* my portofolio */
+#portofolio {
+    background-color: var(--blackDefault);
+    height: auto;
+    margin: 0;
+    padding: 2rem 0;
+    border-bottom: 1px dashed var(--cardColor);
+}
+
+.porto-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0 2rem 0;
+}
+
+.judul-porto {
+    color: white;
+    font-weight: 600;
+    font-size: 2.5rem;
+    padding-top: 1rem;
+}
+
+.judul-porto span {
+    color: var(--yellowDefault);
+}
+
+.portofolio-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    width: 100%;
+    height: 100%;
+}
+
+.porto-card {
+    display: flex;
+    justify-content: flex-end;
+    align-items: left;
+    flex-direction: column;
+    margin-top: 1rem;
+    box-shadow: 1px 12px 60px 30px var(--navyDefault);
+    padding: .5rem;
+}
+
+.porto-card:hover {
+    transform: translateY(10px) translateX(10px);
+    -webkit-transform: translateY(10px) translateX(10px);
+    -moz-transform: translateY(10px) translateX(10px);
+    -ms-transform: translateY(10px) translateX(10px);
+    -o-transform: translateY(10px) translateX(10px);
+}
+
+.porto-card img.image-card {
+    width: 100%;
+    border: transparent;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    overflow: hidden;
+}
+
+.judul-card {
+    color: white;
+    margin: 1rem 0 0 0;
+}
+
+.ket-card {
+    color: white;
+    margin: .5rem 0 0 0;
+}
+
+.bahasa-card {
+    color: white;
+    margin: 1rem 0 1rem 0;
+    font-size: .9rem;
+}
+
+.icon-link {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    padding-bottom: 1rem;
+}
+
+.icon-link svg {
+    align-self: left;
+}
+
+.ket-icon {
+    color: var(--yellowDefault);
+    text-decoration: none;
+    margin: 0;
+}
+
+.porto-card svg {
+    fill: var(--yellowDefault);
+}
+/* end of porto */
+/* Certificates */
+
+/* scrool animaTion */
+#certificates {
+    background-color: var(--navyDefault);
+}
+.stack-area {
+    display: flex;
+    background-color: var(--navyDefault);
+    height: 300vh;
+}
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 50%;
+    height: 100vh;
+    color: white;
+    position:sticky;
+    top: 0;
+}
+.right {
+    flex-basis: 50%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    .kartu {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        width: 400px;
+        border-radius: 25px;
+        background-color: #407AFF;
+        position: absolute;
+        top: calc(50% - 175px);
+        left: calc((50% - 175px));
+        transition: .5s ease-in-out;
+    }
+}
+/* end scroll AnimaTion */
+/* end of Certificates */
+
+/* Contact Section */
+
+section#contact {
+    height: 720px;
+    background-color: var(--blackDefault);
+    color: white;
+}
+
+.container-contact {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.left-contact {
+    flex: 1;
+}
+
+.right-contact {
+    flex: 2;
+}
+
+.judul-contact {
+    color: white;
+    font-weight: 600;
+    font-size: 2.5rem;
+    padding-top: 1rem;
+}
+
+/* End of Contact Section */
+/* end of main */
+
+/* footer */
+footer {
+    padding: 1rem 0;
+    width: 100%;
+    background-color: var(--blackDefault);
+    height: 125px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-top: 1px solid var(--yellowDefault);
+}
+
+.footer-icons {
+    margin: 1rem 0 0 0;
+}
+
+.footer-icons a {
+    margin: 0 .5rem;
+    text-decoration: none;
+}
+
+.footer-icons svg {
+    fill: gray;
+}
+
+.footer-icons a:hover svg.github {
+    fill: #000;
+}
+
+.footer-icons a:hover svg.linked {
+    fill: #0E76A8;
+}
+
+.footer-icons a:hover svg.insta {
+    fill: #FE0B81;
+}
+
+.footer-icons h1 {
+    padding-top: .5rem;
+    font-size: 1rem;
+    color: gray;
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+}
+
+.footer-icons h1:hover {
+    color: var(--yellowDefault);
+    font-weight: bolder;
+}
+/* end footer */
