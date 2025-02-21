@@ -258,10 +258,12 @@ main {
     -moz-transition: .3s ease-in-out;
     -ms-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
+    border-left: 1px solid var(--yellowDefault);
 }
 
 .nav-education h1:hover {
     border-left: 1px solid var(--yellowDefault);
+    color: var(--yellowDefault);
 }
 
 .nav-education h1:focus {
@@ -548,22 +550,39 @@ section#contact {
     color: white;
 }
 
+.div-contact {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
 .container-contact {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
     margin: 0;
     padding: 0;
     flex-direction: row;
     width: 100%;
+    height: 90%;
+}
+
+.contact-info {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
     height: 100%;
-}
-
-.left-contact {
-    flex: 1;
-}
-
-.right-contact {
-    flex: 2;
+    gap: 1rem;
 }
 
 .judul-contact {
@@ -572,6 +591,31 @@ section#contact {
     font-size: 2.5rem;
     padding-top: 1rem;
 }
+
+.judul-contact span {
+    color: var(--yellowDefault);
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 100%;
+}
+
+.input input {
+    width: 100%;
+    height: 2.25rem;
+}
+
+.input label {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+
+
 
 /* End of Contact Section */
 /* end of main */
